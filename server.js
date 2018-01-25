@@ -37,11 +37,18 @@ app.get('/about',(req,res)=>{
 	})
 });
 
+app.get('/project',(req,res)=>{
+	res.render('about.hbs',{
+		pageTitle : 'Project',
+	})
+});
+
 app.get('/bad',(req,res)=>{
 	res.send({
 		errorMessage: 'unable to fetch data'
 	});
 });
+
 
 
 app.listen(port, () => {
